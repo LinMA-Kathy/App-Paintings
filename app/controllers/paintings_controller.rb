@@ -5,7 +5,7 @@ class PaintingsController < ApplicationController
    # GET /paintings or /paintings.json
   def index
     if params[:search]
-      @paintings = Painting.search(params[:search])
+      @paintings = Painting.search(params[:search]).order(created_at: :desc)
       else
       @paintings = Painting.all
 

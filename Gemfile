@@ -10,6 +10,10 @@ gem 'bootstrap'
 gem 'jquery-rails'
 gem 'popper_js', '~> 1.16.0'
 gem 'sassc'
+gem 'devise'
+gem 'webpacker', '~> 5.4'
+
+
 
 
 

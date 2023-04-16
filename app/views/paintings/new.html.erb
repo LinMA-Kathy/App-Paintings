@@ -1,0 +1,15 @@
+<main class="container">
+  <h1 class="my-4">New Painting</h1>
+
+  <div class="row">
+    <div class="col-md-8 col-lg-6">
+      <%= render "form", painting: @painting %>
+    </div>
+  </div>
+
+  <br>
+
+  <div>
+    <%= link_to "Back to paintings", paintings_path, class: "btn btn-secondary" %>
+  </div>
+</main>

@@ -1,0 +1,53 @@
+body.home-background {
+  background-image: image-url('starry_night.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+header.bg-primary {
+  position: relative;
+  z-index: 10;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 1000;
+}
+
+.logo img {
+  max-height: 2rem;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-top: 4rem;
+}
+
+.search-form {
+  max-width: 600px;
+  width: 100%;
+}
+
+.search-form input[type="text"] {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.search-form .input-group-append .btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}

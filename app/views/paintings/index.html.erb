@@ -1,0 +1,25 @@
+<!-- app/views/paintings/index.html.erb -->
+<main class="container">
+  <h1 class="my-4">Original Paintings <%= link_to "Add a New Painting", new_painting_path, class: "btn btn-primary" %></h1>
+  <p>Choose from a wide-ranging selection of 100,000 original drawings and prints ranging in subject, style and media from figurative to abstract, monochromatic to multicoloured, and charcoal to pencil.</p>
+
+  <!-- Paintings grid -->
+  <div class="row">
+    <% @paintings.each do |painting| %>
+      <div class="col-md-4 col-lg-3 mb-4">
+        <div class="card h-100">
+          <%= link_to painting_path(painting) do %>
+            <%= image_tag painting.image_url, alt: painting.title, class: "card-img-top" %>
+          <% end %>
+          <div class="card-body">
+            <h5 class="card-title"><%= painting.title %></h5>
+
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Artist: <%= painting.artist.first_name %> <%= painting.artist.last_name %></small>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</main>
